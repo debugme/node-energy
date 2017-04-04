@@ -1,0 +1,50 @@
+{
+  "name": "nuswitch",
+  "version": "1.0.0",
+  "description": "An engine for comparison of energy plans",
+  "main": "source/index.js",
+  "scripts": {
+    "start": "babel-node source/index",
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watchAll",
+    "watch": "nodemon --watch source/ --exec babel-node source/index"
+  },
+  "keywords": [
+    "price",
+    "comparison"
+  ],
+  "author": "Asad Razvi <debugme@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-jest": "^19.0.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-es2016": "^6.22.0",
+    "babel-preset-es2017": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "jest": "^19.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "source/utilities/*.js",
+      "source/constants/*.js",
+      "source/commands/*.js",
+      "source/formats/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "jest": "^19.0.2",
+    "jsonfile": "^2.4.0",
+    "round-to": "^2.0.0"
+  }
+}
