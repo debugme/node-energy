@@ -17,8 +17,8 @@ const main = () => {
     const onFail = message => console.log(chalk.red(`${message}`))
     const options = { handlers, context, onPass, onFail }
     const parser = buildParser(options)
-    buildRepl(options, parser)
-  } catch(error) {
+    buildRepl(parser)
+  } catch (error) {
     console.log(`error: ${error.toString()}`)
   }
 }
