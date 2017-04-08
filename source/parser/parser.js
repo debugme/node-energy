@@ -1,5 +1,3 @@
-
-
 const buildHandler = (handlers, name) => {
   const { command } = require(`../commands/${name}`)
   const { format } = require(`../formats/${name}`)

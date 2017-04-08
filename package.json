@@ -30,7 +30,9 @@
       "source/utilities/*.js",
       "source/constants/*.js",
       "source/commands/*.js",
-      "source/formats/*.js"
+      "source/formats/*.js",
+      "source/parser/*.js",
+      "source/repl/*.js"
     ],
     "coverageThreshold": {
       "global": {

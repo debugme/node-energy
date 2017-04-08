@@ -1,7 +1,7 @@
+import chalk from 'chalk'
 import jsonfile from 'jsonfile'
-
-import { repl } from './repl/repl'
-import { buildHandler } from './parser/parser'
+import { buildRepl } from './repl/repl'
+import { buildHandler, buildParser } from './parser/parser'
 import { VAT } from './constants/constants'
 
 const main = () => {
@@ -13,7 +13,11 @@ const main = () => {
     const vatMultiplier = 1 + (VAT / 100)
     const context = { plans, vatMultiplier }
     const handlers = ['exit', 'price', 'usage'].reduce(buildHandler, {})
-    repl(handlers, context)
+    const onPass = message => console.log(chalk.green(message))
+    const onFail = message => console.log(chalk.red(`${message}`))
+    const options = { handlers, context, onPass, onFail }
+    const parser = buildParser(options)
+    buildRepl(options, parser)
   } catch(error) {
     console.log(`error: ${error.toString()}`)
   }
