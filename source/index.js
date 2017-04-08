@@ -1,6 +1,7 @@
 import jsonfile from 'jsonfile'
 
-import { processor, buildHandler } from './processor/processor'
+import { repl } from './repl/repl'
+import { buildHandler } from './parser/parser'
 import { VAT } from './constants/constants'
 
 const main = () => {
@@ -12,7 +13,7 @@ const main = () => {
     const vatMultiplier = 1 + (VAT / 100)
     const context = { plans, vatMultiplier }
     const handlers = ['exit', 'price', 'usage'].reduce(buildHandler, {})
-    processor(handlers, context)
+    repl(handlers, context)
   } catch(error) {
     console.log(`error: ${error.toString()}`)
   }
