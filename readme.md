@@ -7,7 +7,7 @@ The application is made up of a driver, a parser, a repl and commands and format
 are intentionally decoupled from each other. This provides the benefits listed below:
 * the driver can decide what commands and formats should form the vocabulary of the parser
 * the parser can be used across different business domains with no code change
-* the repl provides interactive access to the parser with inputs on stdin and outputs on stdout
+* the repl provides interactive access for the User to the parser
 * the commands are simple to reason about as they are stateless and single-purpose
 * the formats can be easily reused between commands to allow for different possible outputs
 
