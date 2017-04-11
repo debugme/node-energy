@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the usage command function should return correct usage for constant plan 1`] = `14954`;
+
+exports[`the usage command function should return correct usage for variable plan 1`] = `103855`;
+
+exports[`the usage command function should throw an error if an unrecognised plan was passed in 1`] = `"Error: plan \\"banana\\" not found in existing plans"`;
+
+exports[`the usage command function should throw an error if an unrecognised supplier was passed in 1`] = `"Error: supplier \\"banana\\" not found in existing plans"`;
+
+exports[`the usage command function should throw an error if invalid monthly spend was passed in  1`] = `"Error: spend \\"10.5\\" is not a positive integer amount"`;
+
+exports[`the usage command function should throw an error if invalid supplier and plan were passed in 1`] = `"Error: plan matching query \\"{\\"supplier\\":\\"ovo\\",\\"plan\\":\\"variable\\"}\\" not found in existing plans"`;
+
+exports[`the usage command function should throw an error if wrong number of arguments were passed in 1`] = `"Error: format is \\"usage <supplier> <plan> <spend>\\""`;

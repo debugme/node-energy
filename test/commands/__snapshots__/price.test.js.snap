@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the price command function should generate a table when given valid inputs 1`] = `
+Array [
+  Object {
+    "plan": "variable",
+    "supplier": "eon",
+    "totalCost": 108.68,
+  },
+  Object {
+    "plan": "fixed",
+    "supplier": "edf",
+    "totalCost": 111.25,
+  },
+  Object {
+    "plan": "standard",
+    "supplier": "ovo",
+    "totalCost": 120.23,
+  },
+  Object {
+    "plan": "standing-charge",
+    "supplier": "bg",
+    "totalCost": 121.33,
+  },
+]
+`;
+
+exports[`the price command function should throw an error if invalid annual usage was passed in 1`] = `"Error: annual usage \\"10.5\\" is not a positive integer amount"`;
+
+exports[`the price command function should throw an error if wrong number of arguments were passed in 1`] = `"Error: format is \\"price <annual_usage>\\""`;
