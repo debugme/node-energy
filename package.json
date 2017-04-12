@@ -7,7 +7,8 @@
     "start": "babel-node source/index",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watchAll",
-    "watch": "nodemon --watch source/ --exec babel-node source/index"
+    "watch": "nodemon --watch source/ --exec babel-node source/index",
+    "lint": "eslint source"
   },
   "keywords": [
     "price",
