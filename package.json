@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "An engine for comparison of energy plans",
   "main": "source/index.js",
+  "engines": {
+    "node": "7.8.0"
+  },
   "scripts": {
+    "clean": "rm -rf coverage/ node_modules/",
     "start": "babel-node source/index",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watchAll",
@@ -46,7 +50,6 @@
   },
   "dependencies": {
     "chalk": "^1.1.3",
-    "jest": "^19.0.2",
     "jsonfile": "^2.4.0",
     "round-to": "^2.0.0"
   }
