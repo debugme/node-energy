@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/debugme/node-energy.svg?branch=master)](https://travis-ci.org/debugme/node-energy)
+
 # Introduction
 This application demonstrates an approach to building a business domain agnostic
 command interpreter that has been specialised for the energy comparison business domain.
