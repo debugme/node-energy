@@ -1,7 +1,7 @@
 {
   "name": "nuswitch",
   "version": "1.0.0",
-  "description": "An engine for comparison of energy plans",
+  "description": "An engine for the comparison of energy plans",
   "main": "source/index.js",
   "engines": {
     "node": "7.8.0"
